@@ -44,7 +44,8 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS += [
-    'users'
+    'users',
+    'concierges'
 ]
 
 MIDDLEWARE = [
