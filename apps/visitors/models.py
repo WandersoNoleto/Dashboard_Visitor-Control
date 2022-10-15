@@ -101,6 +101,19 @@ class Visitor(models.Model):
         
         return "Não registrado"
 
+    def get_cpf(self):
+        if self.cpf:
+            cpf = str(self.cpf)
+
+            cpf_part_1 = cpf[0:3]
+            cpf_part_2 = cpf[3:6]
+            cpf_part_3 = cpf[6:9]
+            cpf_part_4 = cpf[9:11]
+
+            cpf_format = f"{cpf_part_1}.{cpf_part_2}.{cpf_part_3}-{cpf_part_4}"
+            
+            return cpf_format
+
     class Meta:
         verbose_name = "Visitante"
         verbose_name_plural = "Visitantes"
