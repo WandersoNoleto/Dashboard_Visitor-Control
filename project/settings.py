@@ -44,7 +44,8 @@ INSTALLED_APPS += [
 INSTALLED_APPS += [
     'users',
     'concierges',
-    'visitors'
+    'visitors',
+    'dashboard'
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = "Login"
+LOGIN_REDIRECT_URL = "Home"

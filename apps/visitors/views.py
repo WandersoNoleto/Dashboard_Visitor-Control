@@ -1,6 +1,7 @@
 from curses.ascii import HT
 
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseNotAllowed
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
@@ -9,6 +10,7 @@ from visitors.forms import VisitorForm, VisitorFormAuthorized
 from visitors.models import Visitor
 
 
+@login_required
 def visitor_register(request):
     form = VisitorForm()
 
@@ -38,6 +40,7 @@ def visitor_register(request):
     return render(request, "visitor_register.html", context)
 
 
+@login_required
 def visitor_info(request, id):
 
     visitor = get_object_or_404(
@@ -73,7 +76,7 @@ def visitor_info(request, id):
 
     return render(request, "visitor_info.html", context)
 
-
+@login_required
 def visit_completed(request, id):
 
     if request.method == "POST":
