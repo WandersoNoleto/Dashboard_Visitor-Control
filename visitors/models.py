@@ -34,7 +34,7 @@ class Visitor(models.Model):
     arrival_time = models.DateTimeField(
         verbose_name = "Horário de chegada", 
         auto_now = False, 
-        auto_now_add = False
+        auto_now_add = True
     )
 
     departure_time = models.DateTimeField(
