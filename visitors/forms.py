@@ -1,3 +1,5 @@
+from dataclasses import field
+
 from django import forms
 
 from visitors.models import Visitor
@@ -22,3 +24,16 @@ class VisitorForm(forms.ModelForm):
                 "required": "Informe o número da casa"
             }
         }
+
+class VisitorFormAuthorized(forms.ModelForm):
+    resident_who_authorized = forms.CharField(required=True)
+
+    class Meta:
+        model = Visitor
+        fields = ["resident_who_authorized"]
+        error_messages = {
+            "resident_who_authorized": {
+                "required": "Por favor, informe o nome do morador resnponsável"
+            }
+        }
+

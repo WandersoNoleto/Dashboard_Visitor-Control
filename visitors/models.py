@@ -3,6 +3,20 @@ from django.db import models
 
 class Visitor(models.Model):
 
+    VISITOR_STATUS = [
+        ("AGUARDANDO", "Aguardando autorização"),
+        ("EM_VISITA", "Em visita"),
+        ("FINALIZADO", "Visita finalizada")
+    ]
+
+    status = models.CharField(
+        verbose_name = "Status",
+        max_length = 10,
+        choices = VISITOR_STATUS,
+        default = "AGUARDANDO"
+    )
+
+
     personal_name = models.CharField(
         verbose_name = "Nome completo",
         max_length = 194
@@ -44,7 +58,7 @@ class Visitor(models.Model):
         null = True
     )
 
-    autorization_time = models.DateTimeField(
+    authorization_time = models.DateTimeField(
         verbose_name = "Horário de autorização de entrada",
         auto_now = False, 
         blank = True,
@@ -62,6 +76,30 @@ class Visitor(models.Model):
         verbose_name = "Porteiro que registrou",
         on_delete = models.PROTECT
     )
+
+    def get_departure_time(self):
+        if self.departure_time:
+            return self.departure_time
+        
+        return "Não registrado"
+    
+    def get_authorization_time(self):
+        if self.authorization_time:
+            return self.authorization_time
+        
+        return "Aguardando autorização"
+    
+    def get_resident_who_authorized(self):
+        if self.resident_who_authorized:
+            return self.resident_who_authorized
+        
+        return "Aguardando autorização"
+    
+    def get_vehicle_plate(self):
+        if self.vehicle_plate:
+            return self.vehicle_plate
+        
+        return "Não registrado"
 
     class Meta:
         verbose_name = "Visitante"
