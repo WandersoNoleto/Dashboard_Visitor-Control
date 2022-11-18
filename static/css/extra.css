@@ -1,0 +1,31 @@
+.svg-logo-icon{
+    width: 2.6rem;
+    height: 2.6rem;
+}
+
+.content-logo{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.title-logo{
+    margin-left: 1rem;
+
+    text-decoration: none;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+
+    font-size: large;
+    letter-spacing: 0.2rem;
+
+}
+
+.title-logo span{
+    color: rgb(230, 221, 96);
+}

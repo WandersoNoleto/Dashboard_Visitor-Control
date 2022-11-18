@@ -12,11 +12,11 @@ class Concierge(models.Model):
     personal_name = models.CharField(
         verbose_name = 'Nome completo',
         max_length = 70
-        )
+    )
     
     cpf = models.CharField(
         verbose_name = "CPF",
-        max_length=11
+        max_length = 11
     )
 
     phone = models.CharField(
@@ -30,11 +30,10 @@ class Concierge(models.Model):
         auto_now_add = False
     )
 
-
     class Meta:
-        verbose_name = "Porteiro"
+        verbose_name        = "Porteiro"
         verbose_name_plural = "Porteiros"
-        db_table = "porteiro"
+        db_table            = "porteiro"
 
     def __str__(self) -> str:
         return self.personal_name
