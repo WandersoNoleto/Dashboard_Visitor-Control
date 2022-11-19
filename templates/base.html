@@ -21,13 +21,13 @@
     <body id="page-top">
         <div id="wrapper">
             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-                <a class="content-logo" href="#">
+                <div class="content-logo">
                     <div class="rotate-n-15 svg-logo-icon">
                         <img src="{% static 'img/user-shield-solid.svg' %}" alt="Logo Site">
                     </div>
                     
                     <div class="title-logo"><span>V</span>isitors<span>V</span>ille</div>
-                </a>
+                </div>
                 
                 <hr class="sidebar-divider my-0">
                 
@@ -37,10 +37,20 @@
                         <span>Início</span>
                     </a>
                 </li>
+                <hr class="sidebar-divider">
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <i class="fa-regular fa-user-police"></i>
+                        <i class="fas fa-home"></i>
+                        {% comment %} <img id="#" src="{% static 'img/user-shield-solid.svg' %}" alt="" > {% endcomment %}
                         <span>Porteiros</span>
+                    </a>
+                </li>
+                <hr class="sidebar-divider">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-home"></i>
+                        {% comment %} <img id="#" src="{% static 'img/user-shield-solid.svg' %}" alt="" > {% endcomment %}
+                        <span>Moradores</span>
                     </a>
                 </li>
                 

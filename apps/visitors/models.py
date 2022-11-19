@@ -85,7 +85,7 @@ class Visitor(models.Model):
     
     def get_authorization_time(self):
         if self.authorization_time:
-            return self.authorization_time
+            return self.format_authorization_time()
         
         return "Aguardando autorização"
     
@@ -113,6 +113,20 @@ class Visitor(models.Model):
             cpf_format = f"{cpf_part_1}.{cpf_part_2}.{cpf_part_3}-{cpf_part_4}"
             
             return cpf_format
+    
+    def format_arrival_time(self):
+        format_date = self.arrival_time
+
+        format_date = f"{self.arrival_time.day}/{self.arrival_time.month}/{self.arrival_time.year} às {self.arrival_time.hour}:{self.arrival_time.minute}"
+
+        return format_date
+
+    def format_authorization_time(self):
+        format_date = self.authorization_time
+
+        format_date = f"{self.authorization_time.day}/{self.authorization_time.month}/{self.authorization_time.year} às {self.authorization_time.hour}:{self.authorization_time.minute}"
+
+        return format_date
 
     class Meta:
         verbose_name = "Visitante"
