@@ -6,7 +6,7 @@
 
 <div align="justify">
   <h3>:computer: Sobre</h3>
-  Um dashboard focado no controle de visitas para condomínios. Um projeto desenvolvida durante um minicurso de Django promovido pelo <a href="https://gist.github.com/tchaguitos"/>Thiago Brasil<a>. Em resumo, em posse dos porteiros, é possível resgistrar os dados dos(as) visitantes assim como horário de entrada e sáida, bem como o porteiro que o registrou e o morador que permitiu sua entrada, para melhor controle e segurança.
+&nbsp&nbsp Um dashboard focado no controle de visitas para condomínios. Um projeto desenvolvida durante um minicurso de Django promovido pelo <a href="https://gist.github.com/tchaguitos"/>Thiago Brasil<a>. Em resumo, em posse dos porteiros, é possível resgistrar os dados dos(as) visitantes assim como horário de entrada e sáida, bem como o porteiro que o registrou e o morador que permitiu sua entrada, para melhor controle e segurança.
 
 
 ## :rocket: Stack utilizada
